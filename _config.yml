@@ -1,21 +1,10 @@
 ---
-url: http://rubini.us
-safe: true
-lsi: false
-permalink: pretty
-source: .
-destination: ./public
-exclude:
-  - Rakefile
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - CNAME
-  - .gitignore
-  - ./public
-  - drafts
-markdown: rdiscount
-highlighter: pygments 
-port: 9876
+assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+  css_compressor: sass
+  js_compressor:  uglifier
+  cache:          true
 
-gems: ['bootstrap-sass']

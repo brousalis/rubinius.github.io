@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <title>Adam Prescott on Scopes in Rubinius - Rubinius</title>
+  	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content='en' http-equiv='content-language'>
+    <meta content='Rubinius is an implementation of the Ruby programming language. The Rubinius bytecode virtual machine is written in C++. The bytecode compiler is written in pure Ruby. The vast majority of the core library is also written in Ruby, with some supporting primitives that interact with the VM directly.' name='description'>
+    <link href='/' rel='home'>
+    <link href='/' rel='start'>
+    
+    
+    <link href='/feed/atom.xml' rel='alternate' type='application/atom+xml' title='Rubinius Blog' />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script><![endif]-->
+
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" />
+    <link href="/stylesheets/pygments.css" media="screen" rel="stylesheet" />
+
+    <link href="/favicon.ico"                 rel="shortcut icon"    type="image/vnd.microsoft.icon" />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" sizes="72x72"   />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" sizes="114x114" />
+  </head>
+
+  <body>
+    <div class='container'>
+  <div class='span-21 blog_menu'>
+    <header>
+      <nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a id="blog" href="/blog">Blog</a></li>
+    <li><a id="documentation" href="/doc/en">Documentation</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/security">Security</a></li>
+    <li><a href="/downloads">Downloads</a></li>
+  </ul>
+</nav>
+
+    </header>
+  </div>
+
+  <div class='span-3 last'>
+  <div id='version'>
+    <a href="http://releases.rubini.us/rubinius-2.2.10.tar.bz2">2.2.10</a>
+  </div>
+</div>
+
+</div>
+
+<div class="container posts_nav">
+  <nav>
+    <a href="/blog/posts_index">Index of Posts</a>
+    <a id="feed_icon" href="/feed/atom.xml"><img alt="subscribe" src="/images/feed-icon16x16.png" /></a>
+  </nav>
+</div>
+
+<div class="container blog_posts">
+  <h2 class="post_title">Adam Prescott on Scopes in Rubinius</h2>
+  
+  <div class="by_line">
+  <p><span class="author">Shane Becker</span>
+    <span class="date">22 May 2011</span>
+    
+  </p>
+</div>
+
+  <p><cite class="vcard"><a class="url fn" href="http://aprescott.com" title="Adam Prescott">Adam Prescott</a></cite> wrote a lengthy article about <i>variables, closures and scope</i> in Ruby, <a href="http://aprescott.com/posts/variables-closures-and-scope" title="Posts / Variables, closures &amp; scope &mdash; Adam Prescott">mentioning Rubinius at the end</a>:</p>
+
+<blockquote cite="http://aprescott.com/posts/variables-closures-and-scope">
+  <p> One of the really cool things about the <a href="http://en.wikipedia.org/wiki/Rubinius">Rubinius</a> implementation of Ruby is that it exposes, by requirement, a level of internals which you can&rsquo;t find in <abbr title="Matz' Ruby Interpreter">MRI</abbr>, including some internals with scopes. Because these internals are exposed in Ruby itself, you can <a href="http://yehudakatz.com/2011/02/18/getting-comfortable-with-rubinius-pure-ruby-internals/">play around with scopes as objects</a>, using <code>VariableScope</code>, including getting access to the available local variables within that scope, with <code>VariableScope.current.locals</code>. </p>
+</blockquote>
+
+
+<p>How are <strong>you</strong> using Rubinius? What are you doing with it that you couldn't do before? What is it missing for you to really dive in? Let us know. We're listening.</p>
+
+<ul>
+<li><a href="community@rubini.us">community@rubini.us</a></li>
+<li><a href="http://twitter.com/rubinius" title="@rubinius on twitter">@rubinius</a></li>
+</ul>
+
+
+<p>&mdash; Use Ruby&trade;</p>
+
+
+  <div class="container comments">
+<p>Tweet at <a href="https://twitter.com/rubinius">@rubinius</a> on Twitter or
+  email <a href="mailto:community@rubini.us">community@rubini.us</a>. Please
+  report Rubinius issues to our <a
+  href="https://github.com/rubinius/rubinius/issues">issue tracker</a>.</p>
+</div>
+
+  <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup" class="container">
+<form action="http://rubini.us7.list-manage.com/subscribe/post?u=72ad4855b528b6af79bd06543&amp;id=db5b4f0e45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address" required>
+  <input type="submit" value="Email Me Updates!" name="subscribe" id="mc-embedded-subscribe" class="button">
+
+  <p>We email about once a month and never share
+    your email address for any reason</p>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+    <div class="container">
+  <h3>Recent Posts</h3>
+  <ul>
+  
+    
+      <li>
+        <a href="/2014/01/06/happy-2014/" title="Happy 2014!" class="post_title"> Happy 2014! </a>
+        <span class="author">Brian Shirai</span>
+      </li>
+    
+  
+    
+      <li>
+        <a href="/2013/12/03/testing-with-rbx-on-travis/" title="Testing Your Project with Rubinius on Travis" class="post_title"> Testing Your Project with Rubinius on Travis </a>
+        <span class="author">Brian Shirai</span>
+      </li>
+    
+  
+    
+      <li>
+        <a href="/2013/10/18/the-parisian-release/" title="The Parisian Release" class="post_title"> The Parisian Release </a>
+        <span class="author">Brian Shirai</span>
+      </li>
+    
+  
+    
+      <li>
+        <a href="/2013/10/15/introducing-rubinius-x/" title="Introducing Rubinius X" class="post_title"> Introducing Rubinius X </a>
+        <span class="author">Brian Shirai</span>
+      </li>
+    
+  
+    
+      <li>
+        <a href="/2013/10/11/the-once-and-future-rubinius/" title="The Once and Future Rubinius" class="post_title"> The Once and Future Rubinius </a>
+        <span class="author">Brian Shirai</span>
+      </li>
+    
+  
+  </ul>
+  </div>
+
+</div>
+<footer>
+  <div class='container'>
+    <nav>
+      <ul>
+        <li><a rel="external" href="http://twitter.com/rubinius">Follow Rubinius on Twitter</a></li>
+        <li><a rel="external" href="http://github.com/rubinius/rubinius">Fork Rubinius on github</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  var _gaq=[['_setAccount','UA-12328521-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery-1.3.2.js"></script>
+    <script src="/javascripts/paging_keys.js"></script>
+    
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>

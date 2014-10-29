@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+  <head>
+    <title>Guía de estilo - Rubinius</title>
+  	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content='es' http-equiv='content-language'>
+    <meta content='Rubinius is an implementation of the Ruby programming language. The Rubinius bytecode virtual machine is written in C++. The bytecode compiler is written in pure Ruby. The vast majority of the core library is also written in Ruby, with some supporting primitives that interact with the VM directly.' name='description'>
+    <link href='/' rel='home'>
+    <link href='/' rel='start'>
+    <link href='/doc/es/contributing/communication' rel='prev' title='Comunicación'>
+    <link href='/doc/es/ruby'         rel='next' title='Ruby'>
+    
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script><![endif]-->
+
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" />
+    <link href="/stylesheets/pygments.css" media="screen" rel="stylesheet" />
+
+    <link href="/favicon.ico"                 rel="shortcut icon"    type="image/vnd.microsoft.icon" />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" sizes="72x72"   />
+    <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" sizes="114x114" />
+  </head>
+
+  <body>
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <a href="#" class="logo">Rubinius</a>
+    <div role="search">
+      <input type="text" name="q" placeholder="Search docs">
+    </div>
+  </div>
+
+  <div class="sidebar-nav">
+    <ul>
+      <li><a href="/doc/en/what-is-rubinius/">What is Rubinius?</a> </li> 
+      <li><a href="/doc/en/getting-started/">Getting Started</a>
+        <ul>
+          <li><a href="/doc/en/getting-started/requirements/">Requirements</a> </li>
+          <li><a href="/doc/en/getting-started/building/">Building</a> </li>
+          <li><a href="/doc/en/getting-started/running-rubinius/">Running Rubinius</a> </li>
+          <li><a href="/doc/en/getting-started/troubleshooting/">Troubleshooting</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/contributing/">Contributing</a>
+        <ul>
+          <li><a href="/doc/en/contributing/communication/">Communication</a> </li>
+          <li><a href="/doc/en/contributing/style-guide">Style Guide</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/ruby/">Ruby</a>
+        <ul>
+          <li><a href="/doc/en/ruby/scripts/">Scripts</a> </li>
+          <li><a href="/doc/en/ruby/methods/">Methods</a> </li>
+          <li><a href="/doc/en/ruby/constants/">Constants</a> </li>
+          <li><a href="/doc/en/ruby/classes-and-modules/">Classes &amp; Modules</a> </li>
+          <li><a href="/doc/en/ruby/blocks-and-procs/">Blocks &amp; Procs</a> </li>
+          <li><a href="/doc/en/ruby/local-variables/">Local Variables</a> </li>
+          <li><a href="/doc/en/ruby/instance-variables/">Instance Variables</a> </li>
+          <li><a href="/doc/en/ruby/class-variables/">Class Variables</a> </li>
+          <li><a href="/doc/en/ruby/global-variables/">Global Variables</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/specs/">Specs</a>
+        <ul>
+          <li><a href="/doc/en/specs/rubyspec/">RubySpec</a> </li> 
+          <li><a href="/doc/en/specs/compiler/">Compiler Specs</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/build-system/">Build System</a> </li>
+      <li><a href="/doc/en/bootstrapping/">Bootstrapping</a> </li>
+      <li><a href="/doc/en/virtual-machine/">Virtual Machine</a> 
+        <ul>
+          <li><a href="/doc/en/virtual-machine/instructions/">Instructions</a> </li>
+          <li><a href="/doc/en/virtual-machine/custom-dispatch-logic/">Custom Dispatch Logic</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/bytecode-compiler/">Bytecode Compiler</a>
+        <ul>
+          <li><a href="/doc/en/bytecode-compiler/parser/">Parser Stage</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/ast/">AST</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/generator/">Generator Stage</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/encoder/">Encoder Stage</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/packager/">Packager Stage</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/writer/">Writer Stage</a> </li>
+          <li>Printers</li>
+          <li><a href="/doc/en/bytecode-compiler/transformations/">Transformations</a> </li>
+          <li><a href="/doc/en/bytecode-compiler/customization/">Customizing the Pipeline</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/jit/">JIT Compiler</a> </li>
+      <li><a href="/doc/en/memory-system/">Memory system</a> 
+        <ul>
+          <li><a href="/doc/en/memory-system/object-layout/">Object layout</a> </li>
+          <li><a href="/doc/en/memory-system/garbage-collector/">Garbage collector</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/systems/">Rubinius Systems</a>
+        <ul>
+          <li><a href="/doc/en/systems/primitives/">Primitives</a> </li>
+          <li><a href="/doc/en/systems/ffi/">FFI</a> </li>
+          <li><a href="/doc/en/systems/concurrency/">Concurrency</a> </li>
+          <li><a href="/doc/en/systems/io/">IO</a> </li>
+          <li><a href="/doc/en/systems/c-api/">C-API</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/tools/">Tools</a>
+        <ul>
+          <li><a href="/doc/en/tools/debugger/">Debugger</a> </li>
+          <li><a href="/doc/en/tools/profiler/">Profiler</a> </li>
+          <li><a href="/doc/en/tools/memory-analysis/">Memory Analysis</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/guides/">Guides</a>
+        <ul>
+          <li><a href="/doc/en/guides/migrating-from-mri-to-rubinius/">Migrating from MRI to Rubinius</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/how-to/">How-To</a>
+        <ul>
+          <li><a href="/doc/en/how-to/write-a-ticket/">Write a Ticket</a> </li>
+          <li><a href="/doc/en/how-to/write-a-ruby-spec/">Write a Ruby Spec</a> </li>
+          <li><a href="/doc/en/how-to/fix-a-failing-spec/">Fix a Failing Spec</a> </li>
+          <li><a href="/doc/en/how-to/write-benchmarks/">Write Benchmarks</a> </li>
+          <li><a href="/doc/en/how-to/write-a-blog-post/">Write a Blog Post</a> </li>
+          <li><a href="/doc/en/how-to/write-documentation/">Write Documentation</a> </li>
+          <li><a href="/doc/en/how-to/translate-documentation/">Translate Documentation</a> </li>
+          <li><a href="/doc/en/how-to/commit-to-github/">Commit to Github</a> </li>
+        </ul>
+      </li>
+      <li><a href="/doc/en/appendix-a-glossary/">Appendix A - Glossary</a> </li>
+      <li><a href="/doc/en/appendix-b-reading-list/">Appendix B - Reading List</a> </li>
+      <li><a href="/doc/en/index-of-terms/">Index of Terms</a> </li>
+      <li><a href="/doc/en/frequently-asked-questions/">Frequently Asked Questions</a> </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <ul>
+  
+  
+  
+  <li><a href="/doc/de/contributing/style-guide/"
+    
+    >de</a></li>
+  
+  
+  
+  <li><a href="/doc/en/contributing/style-guide/"
+    
+    >en</a></li>
+  
+  
+  
+  <li><a href="/doc/es/contributing/style-guide/"
+    
+    class="current"
+    
+    >es</a></li>
+  
+  
+  
+  <li><a href="/doc/fr/contributing/style-guide/"
+    
+    >fr</a></li>
+  
+  
+  
+  <li><a href="/doc/it/contributing/style-guide/"
+    
+    >it</a></li>
+  
+  
+  
+  <li><a href="/doc/ja/contributing/style-guide/"
+    
+    >ja</a></li>
+  
+  
+  
+  <li><a href="/doc/pl/contributing/style-guide/"
+    
+    >pl</a></li>
+  
+  
+  
+  <li><a href="/doc/pt-br/contributing/style-guide/"
+    
+    >pt-br</a></li>
+  
+  
+  
+  <li><a href="/doc/ru/contributing/style-guide/"
+    
+    >ru</a></li>
+  
+</ul>
+
+    <div class="social">
+      <div class="icons">
+        <a href="http://twitter.com/rubinius" class="twitter">@rubinius</a>
+        <a href="http://github.com/rubinius" class="github">github</a>
+      </div>
+      <div class="version">
+        <a href="https://github.com/rubinius/rubinius/releases/tag/v2.2.10">v2.2.10</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container documentation">
+  <h2>Guía de estilo</h2>
+
+  
+
+  
+
+    <p>Las siguientes directrices tienen por objeto mantener el código de Rubinius
+entendible. Cuando tenga alguna duda acerca de una guía presentada aquí,
+pregunte en el canal de IRC #rubinius en irc.freenode.net.</p>
+
+<h2>Para todo el código</h2>
+
+<ul>
+<li>Configure su editor para utilizar tabuladores suaves, no
+tabuladores duros.</li>
+<li>Utilice indentación a dos espacios</li>
+<li>Deje una línea nueva al final cada archivo</li>
+<li>Utilice nombres de variables, clases, comentarios en inglés.</li>
+</ul>
+
+
+<h2>Código C++</h2>
+
+<ul>
+<li><p>No ponga espacio entre la condición y paréntesis.
+  Utilice <code>if(1)</code>, NO <code>if (1)</code></p></li>
+<li><p>Ponga la llave de apertura en la misma línea que la declaración de la
+función o condicional</p></li>
+<li><p>Utilice siempre llaves, aunque se puedan omitir.</p></li>
+<li><p>Prefiera paréntesis a las reglas de prioridad implícita (dentro de lo
+razonable)</p></li>
+<li><p>Versiones alternativas de las funciones deben ser nombradas en función de
+por qué son diferentes de la primera. Si hay una función 'person()' y
+quiere una versión que tome el nombre de la persona, esta debería ser
+'person_with_name(char *name)' o 'person_with_details(char *name, ...)',
+NO 'person1(char *name)'.</p></li>
+</ul>
+
+
+<h2>Código Ruby</h2>
+
+<ul>
+<li><p>Métodos: Trate de mantener sus métodos cortos (que se puedan visualizar en
+una sola pantalla) y trate de cumplir el principio DRY dentro de lo
+razonable. En general, la funcionalidad común debe ser extraída en métodos
+auxiliares (que usted puede hacer "privados"), pero en algunos casos, en
+particular cuando se trabaja con código del núcleo, a veces tratar de
+hacer las cosas en un estilo DRY puede ser sólo un obstáculo, por ejemplo
+si se tiene que maniobrar entre de diferentes condiciones de error.</p></li>
+<li><p>Los nombres de método: deben ser claros, expresivos y significativos.
+Evite el uso de guines bajos para "proteger" el método ('__send__')
+con algunas excepciones.</p></li>
+<li><p>Los nombres de método estilo Smalltalk están bien, lo que significa
+que podría haber un método SomeClass.make_from cuando está destinado a ser
+invocado como <code>SomeClass.make_from file</code> o
+<code>SomeClass.make_from :file =&gt; name</code>.  En estos casos el nombre del
+parámetro <em>completa</em> el nombre del método y contribuye a una lectura más
+natural.</p></li>
+<li><p>Los nombres de variables: que sean claros y significativos (con algunas
+conocidas excepciones como la utilización de 'i' como un contador.) Trate
+de evitar enmascarar los nombres de métodos, por ejemplo dentro de Array
+utilice 'idx' en vez de 'index' porque el último es también un nombre de
+método.</p></li>
+<li><p>Post-condiciones: use post-condiciones sólo <em>si</em> su expresión es de una
+sola línea <em>y</em> no tiene muchas condiciones.</p></li>
+<li><p>Bloques: Utilice <code>do ... end</code> o <code>{...}</code>, con espacios entre los
+delimitadores y el código (<code>foo { |arg| código }</code>). Separe expresiones
+largas o complejas en varias líneas, de esta forma:</p>
+
+<pre><code>mapped = foo.map do |elem|
+  do_something_with elem
+end
+</code></pre></li>
+<li><p>Definiciones de Módulos/Clases con scope:</p>
+
+<pre><code>module Rubinius::Profiler
+  class Sampler
+  end
+end
+</code></pre></li>
+</ul>
+
+
+<h2>Código del Kernel (núcleo)</h2>
+
+<p>La directriz principal para todo el código del núcleo es simple y eficiente.
+Un código simple es a menudo más eficaz y generalmente más facil de
+comprender. No debe haber metaprogramación en el código de inicio. Utilice los
+métodos #attr_xxx en todo el código fuente del núcleo. Además, haga alias de
+métodos utilizando #alias_method inmediatamente despues de la definición del
+método. Especifique los métodos privados con <code>private :sym</code> justo después de
+la definición del método. Recuerde que las versiones de los métodos enumerados
+aquí durante la etapa alfa toman un argumento único: un símbolo.</p>
+
+<h2>Documentación</h2>
+
+<ul>
+<li><p>Utilice RDoc para la documentación del código Ruby.</p></li>
+<li><p>Use Doxygen para la documentación del código C++.</p></li>
+<li><p>Utilice Markdown para la documentación dentro del directorio
+/doc. Vea <a href="http://daringfireball.net/projects/markdown/syntax">Sintaxis de
+Markdown</a>. Establezca
+el ancho de texto a 78 caracteres y el uso de fin de lineas duras.</p></li>
+</ul>
+
+
+
+</div>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery-1.3.2.js"></script>
+    <script src="/javascripts/paging_keys.js"></script>
+    
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
