@@ -11,11 +11,8 @@ languages:
   - pt-br
   - ru
 ---
-{% include doc_header.html %}
 
-{% include lang_nav.html %}
-
-{% include doc_nav.html %}
+{% include doc_sidebar.html %}
 
 <div class="container documentation">
   <h2>{{ page.title }}</h2>
@@ -30,11 +27,3 @@ languages:
 
   {{ content }}
 </div>
-
-{% include doc_nav.html %}
-
-<div class="container">
-  {% include comments.html %}
-</div>
-
-{% include footer.html %}

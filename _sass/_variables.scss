@@ -1,0 +1,19 @@
+$container-desktop:  90% !default;
+$container-tablet:   95% !default;
+
+$phone:              '(max-width: 480px)';
+$phone-sm:           '(max-width: 320px)';
+$phone-lg:           '(max-width: 595px)';
+$tablet:             '(max-width: 767px)';
+$tablet-landscape:   '(min-width: 768px) and (max-width: 992px)';
+$desktop:            '(max-width: 1200px)';
+$desktop-tablet:     '(min-width: 768px)';
+$desktop-xs:         '(max-width: 992px)';
+$desktop-sm:         '(max-width: 1060px)';
+$desktop-lg:         '(min-width: 1200px)';
+
+@mixin respond-to($media) {
+  @media #{$media} {
+    @content
+  }
+}
