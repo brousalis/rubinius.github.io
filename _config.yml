@@ -13,9 +13,7 @@ exclude:
   - CNAME
   - .gitignore
   - ./public
-  - ./stylesheets/*.scss
   - drafts
 markdown: rdiscount
-pygments: true
-pygments: false
+highlighter: pygments 
 port: 9876
