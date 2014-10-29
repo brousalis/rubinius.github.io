@@ -1,10 +1,20 @@
 ---
-assets:
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-  css_compressor: sass
-  js_compressor:  uglifier
-  cache:          true
-
+url: http://rubini.us
+safe: false 
+lsi: false
+permalink: pretty
+destination: ./public
+exclude:
+  - Rakefile
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
+  - ./public
+  - drafts
+markdown: rdiscount
+highlighter: pygments 
+port: 9876
+sass:
+  style: :compressed
