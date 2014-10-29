@@ -17,3 +17,5 @@ exclude:
 markdown: rdiscount
 highlighter: pygments 
 port: 9876
+
+gems: ['bootstrap-sass']
