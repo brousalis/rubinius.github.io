@@ -12,6 +12,7 @@ exclude:
   - CNAME
   - .gitignore
   - ./public
+  - ./stylesheets/*.scss
   - drafts
 markdown: rdiscount
 highlighter: pygments 
