@@ -1,31 +1,44 @@
-$font-family-sans-serif:    'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato|Droid+Sans|Source+Sans+Pro);
 
-$container-desktop:          90% !default;
-$container-tablet:           95% !default;
+$font-family-sans-serif:  'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-size-base:          15px !default;
 
-$sidebar-width:              280px;
-$doc-width:                  750px;
+$body-bg:                 #fff;
 
-$screen-xs:                  480px !default;
-$screen-xs-min:              $screen-xs !default;
-$screen-phone:               $screen-xs-min !default;
+$container-desktop:       95% !default;
+$container-tablet:        100% !default;
 
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
+$sidebar-width:           280px;
+$sidebar-padding:         20px;
+$sidebar-bg:              #f1f1f1;
+$sidebar-border-color:    #dedede;
+$sidebar-link-color:      #444;
+$sidebar-header-height:   80px;
+$sidebar-header-bg:       #fff;
 
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
+$doc-width:               750px;
 
-$screen-lg:                  1200px !default;
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen-xs:               480px !default;
+$screen-xs-min:           $screen-xs !default;
+$screen-phone:            $screen-xs-min !default;
 
-$screen-xlg:                  1441px !default;
-$screen-xlg-min:              $screen-lg !default;
-$screen-xlg-desktop:          $screen-lg-min !default;
+$screen-sm:               768px !default;
+$screen-sm-min:           $screen-sm !default;
+$screen-tablet:           $screen-sm-min !default;
 
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-md:               992px !default;
+$screen-md-min:           $screen-md !default;
+$screen-desktop:          $screen-md-min !default;
+
+$screen-lg:               1200px !default;
+$screen-lg-min:           $screen-lg !default;
+$screen-lg-desktop:       $screen-lg-min !default;
+
+$screen-xlg:              1441px !default;
+$screen-xlg-min:          $screen-lg !default;
+$screen-xlg-desktop:      $screen-lg-min !default;
+
+$screen-xs-max:           ($screen-sm-min - 1) !default;
+$screen-sm-max:           ($screen-md-min - 1) !default;
+$screen-md-max:           ($screen-lg-min - 1) !default;

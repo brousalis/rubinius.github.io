@@ -1,9 +1,6 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
-
-@import "base";
 @import "variables";
 
 @import "bootstrap/variables";
@@ -21,5 +18,6 @@
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
 
+@import "base";
 @import "page";
 @import "docs";

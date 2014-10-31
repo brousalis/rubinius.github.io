@@ -1,11 +1,12 @@
-<ul>
+<div class="languages">
+  <span>Language: </span>
   {% for lang in page.languages %}
   {% capture oldurl_prefix %}/doc/{{ page.lang }}/{% endcapture %}
   {% capture newurl_prefix %}/doc/{{ lang }}/{% endcapture %}
-  <li><a href="{{ page.url | replace_first: oldurl_prefix, newurl_prefix }}"
+  <a href="{{ page.url | replace_first: oldurl_prefix, newurl_prefix }}"
     {% if page.lang == lang %}
     class="current"
     {% endif %}
-    >{{ lang }}</a></li>
+  >{{ lang }}</a>
   {% endfor %}
-</ul>
+</div>
