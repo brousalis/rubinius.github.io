@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_it
 title: Memory system
 previous: JIT Compiler
 previous_url: jit

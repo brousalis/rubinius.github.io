@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Garbage Collector
 previous: JIT Compiler
 previous_url: jit

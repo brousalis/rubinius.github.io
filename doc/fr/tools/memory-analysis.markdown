@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Memory Analysis
 previous: Profiler
 previous_url: tools/profiler

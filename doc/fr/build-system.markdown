@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Build System
 previous: Specs - Compiler
 previous_url: specs/compiler

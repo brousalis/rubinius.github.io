@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_it
 title: How-To - Fix a Failing Spec
 previous: Write a Ruby Spec
 previous_url: how-to/write-a-ruby-spec

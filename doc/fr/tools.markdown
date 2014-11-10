@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Tools
 previous: Rubinius Systems - C-API
 previous_url: systems/c-api

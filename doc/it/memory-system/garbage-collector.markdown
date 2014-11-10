@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_it
 title: Garbage Collector
 previous: Object layout
 previous_url: memory-system/object-layout

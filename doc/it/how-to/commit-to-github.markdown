@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_it
 title: How-To - Commit Changes to Github
 previous: Translate Documentation
 previous_url: how-to/translate-documentation

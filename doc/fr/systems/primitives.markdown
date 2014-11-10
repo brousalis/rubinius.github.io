@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Primitives
 previous: Rubinius Systems
 previous_url: systems

@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: How-To - Write Documentation
 previous: Write a Blog Post
 previous_url: how-to/write-a-blog-post
@@ -28,7 +28,7 @@ document. The Table of Contents document shows the complete structure.
 The YAML attributes in a document look like the following:
 
     ---
-    layout: doc_en
+    layout: doc_fr
     title: How-To - Write Documentation
     previous: Write a Blog Post
     previous_url: how-to/write-a-blog-post

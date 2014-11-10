@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Nursery
 previous: Garbage Collector
 previous_url: garbage-collector

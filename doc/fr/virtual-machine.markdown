@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Virtual Machine
 previous: Bootstrapping
 previous_url: bootstrapping

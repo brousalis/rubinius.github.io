@@ -30,7 +30,7 @@ zeigt dabei die komplette Struktur aller übrigen Dokumente an.
 Die YAML Attribute in einem Dokument sehen in etwa wie folgt aus:
 
     ---
-    layout: doc_en
+    layout: doc_de
     title: How-To - Write Documentation
     previous: Write a Blog Post
     previous_url: how-to/write-a-blog-post

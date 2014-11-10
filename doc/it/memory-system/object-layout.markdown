@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_it
 title: Memory system
 previous: Memory system
 previous_url: memory-system

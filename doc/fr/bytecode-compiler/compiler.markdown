@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Compiler
 previous: AST
 previous_url: bytecode-compiler/ast

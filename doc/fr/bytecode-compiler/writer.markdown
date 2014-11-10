@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Writer Stage
 previous: Packager Stage
 previous_url: bytecode-compiler/packager

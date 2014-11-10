@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Ruby
 previous: Style Guide
 previous_url: contributing/style-guide

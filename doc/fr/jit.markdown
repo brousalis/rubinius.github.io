@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: JIT Compiler
 previous: Bytecode Compiler - Generator
 previous_url: bytecode-compiler/generator

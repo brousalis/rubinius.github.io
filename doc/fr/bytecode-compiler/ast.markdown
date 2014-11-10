@@ -1,5 +1,5 @@
 ---
-layout: doc_en
+layout: doc_fr
 title: Abstract Syntax Trees
 previous: Parser
 previous_url: bytecode-compiler/parser
