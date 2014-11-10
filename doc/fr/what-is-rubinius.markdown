@@ -2,9 +2,8 @@
 layout: doc_fr
 next: Démarrage
 next_url: getting-started
+title: "Qu'est-ce que Rubinius ?"
 ---
-
-## Qu'est-ce que Rubinius ?
 
 Rubinius est une implémentation du [langage de programmation Ruby](http://www.ruby-lang.org/fr/).
 

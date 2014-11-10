@@ -28,6 +28,7 @@ module Jekyll
       # Index all pages except pages matching any value in config['lunr_excludes'] or with date['exclude_from_search']
       # The main content from each page is extracted and saved to disk as json
       def generate(site)
+        return false
         puts 'Running the search indexer...'
 
         # gather pages and posts
@@ -35,37 +36,38 @@ module Jekyll
         content_renderer = PageRenderer.new(site)
         index = []
 
-        items.each do |item|
-          entry = SearchEntry.create(item, content_renderer)
+        langs = ['de','en','es','fr','it','ja','pl','pt-br','ru']
 
-          entry.strip_index_suffix_from_url! if @strip_index_html
+        langs.each do |lang| 
+          items.each do |item|
+            entry = SearchEntry.create(item, content_renderer)
 
-          next if(item.data['layout'].sub('doc_','') != 'en') 
+            entry.strip_index_suffix_from_url! if @strip_index_html
 
-          index << {
-            :title => entry.title,
-            :url => entry.url,
-            :lang => item.data['layout'].sub('doc_',''),
-            :body => entry.body
-          }
+            next if(item.data['layout'].sub('doc_','') != lang) 
+
+            index << {
+              :title => entry.title,
+              :url => entry.url,
+              :lang => item.data['layout'].sub('doc_',''),
+              :body => entry.body
+            }
+            
+            #puts 'Indexed ' << "#{entry.title} (#{entry.url})"
+          end
+        
+          json = JSON.generate({:entries => index})
           
-          puts 'Indexed ' << "#{entry.title} (#{entry.url})"
-        end
-        
-        json = JSON.generate({:entries => index})
-        
-        # Create destination directory if it doesn't exist yet. Otherwise, we cannot write our file there.
-        Dir::mkdir(site.dest) unless File.directory?(site.dest)
-        
-        # File I/O: create search.json file and write out pretty-printed JSON
-        filename = 'search.json'
-        
-        File.open(File.join(site.dest, filename), "w") do |file|
-          file.write(json)
-        end
+          Dir::mkdir(site.dest) unless File.directory?(site.dest)
+          
+          filename = "search_#{lang}.json"
+          
+          File.open(File.join(site.dest, filename), "w") do |file|
+            file.write(json)
+          end
 
-        # Keep the search.json file from being cleaned by Jekyll
-        site.static_files << SearchIndexFile.new(site, site.dest, "/", filename)
+          site.static_files << SearchIndexFile.new(site, site.dest, "/", filename)
+        end
       end
 
     private

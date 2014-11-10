@@ -3,9 +3,8 @@ layout: doc_ja
 title: Rubinius とは
 next: はじめに
 next_url: getting-started
+title: 'Rubinius とは'
 ---
-
-## Rubinius とは
 
 Rubinius は [プログラミング言語 Ruby](http://ruby-lang.org) の実装です。
 

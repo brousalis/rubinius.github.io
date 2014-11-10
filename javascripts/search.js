@@ -123,7 +123,7 @@
         this.$entries.empty();
       } else {
         var results = $.map(this.index.search(query), function(result) {
-          var lang = $('.languages .current').text();
+          //var lang = $('.languages .current').text().trim();
           return $.grep(entries, function(entry) { 
             return entry.id === parseInt(result.ref, 10) ; //&& entry.url.match("/doc/"+lang)
           })[0];

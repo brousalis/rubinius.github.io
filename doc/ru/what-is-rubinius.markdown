@@ -2,9 +2,8 @@
 layout: doc_ru
 next: Для начала...
 next_url: getting-started
+title: 'Что такое Rubinius'
 ---
-
-## Что такое Rubinius
 
 Rubinius --- это реализация [языка программирования Ruby](http://ruby-lang.org).
 

@@ -1,7 +1,10 @@
 $(function() {
-  if($('body').find('.doc-wrapper')) {
+
+  if($('body').find('.doc-wrapper')) { // i know, i know.
+    var lang = $('.languages .current').text().trim();
+
     $('#search-query').lunrSearch({
-      indexUrl: '/search.json',
+      indexUrl: '/search_'+lang+'.json',
       results:  '#search-results',
       entries:  '.entries',
       template: '#search-results-template'

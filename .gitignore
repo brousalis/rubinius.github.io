@@ -6,3 +6,5 @@ build/*
 Gemfile.lock
 .sass-cache
 .jekyll-assets-cache
+.DS_Store
+*.DS_Store

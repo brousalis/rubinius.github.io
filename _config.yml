@@ -14,7 +14,7 @@ exclude:
   - ./public
   - ./stylesheets/*.scss
   - drafts
-markdown: rdiscount
+markdown: kramdown 
 highlighter: pygments 
 port: 9876
 sass:
