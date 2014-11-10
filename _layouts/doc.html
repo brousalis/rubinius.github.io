@@ -15,6 +15,10 @@ languages:
 {% include doc_sidebar.html %}
 
 <div class="doc-wrapper">
+  <div class="doc" id="search-results" style="display: none;">
+    <h2>Search results</h2>
+    <ul class="entries"></ul>
+  </div>
   <div class="doc">
     <h2>{{ page.title }}</h2>
 
@@ -29,3 +33,14 @@ languages:
     {{ content }}
   </div>
 </div>
+
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <li> 
+      <a href="{{url}}">{{title}}</a>
+      <p>{{body}}</p>
+    </li>
+  {{/entries}}
+</script>
+{% endraw %}

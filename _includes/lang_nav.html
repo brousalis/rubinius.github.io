@@ -1,12 +1,13 @@
-<div class="languages">
+<div class="languages {{ page.lang }}">
   <span>Language: </span>
-  {% for lang in page.languages %}
-  {% capture oldurl_prefix %}/doc/{{ page.lang }}/{% endcapture %}
-  {% capture newurl_prefix %}/doc/{{ lang }}/{% endcapture %}
-  <a href="{{ page.url | replace_first: oldurl_prefix, newurl_prefix }}"
-    {% if page.lang == lang %}
-    class="current"
-    {% endif %}
-  >{{ lang }}</a>
-  {% endfor %}
+  <div class="menu">
+    {% for lang in page.languages %}
+    {% capture oldurl_prefix %}/doc/{{ page.lang }}/{% endcapture %}
+    {% capture newurl_prefix %}/doc/{{ lang }}/{% endcapture %}
+    <a href="{% if page.lang != lang %} {{ page.url | replace_first: oldurl_prefix, newurl_prefix }} {% else %} # {% endif %}"
+        {% if page.lang == lang %} class="current" {% endif %}>
+        {{ lang }}
+      </a>
+    {% endfor %}
+  </div>
 </div>

@@ -18,6 +18,7 @@
   color: #ddd;
   padding-bottom: 45px;
   float: left;
+  @include clearfix;
  }
 
 .sidebar-header {
@@ -68,10 +69,15 @@ div[role=search] {
       padding: 5px $sidebar-padding;
       color: $sidebar-link-color;
       position: relative;
+      font-weight: bold;
 
       &:hover {
         text-decoration: none;
         background: darken($sidebar-bg, 3%);
+      }
+
+      &.active {
+        background: darken($sidebar-bg, 5%);
       }
     }
   }
@@ -81,6 +87,7 @@ div[role=search] {
     padding: 0;
 
     li a {
+      font-weight: normal;
       padding-left: $sidebar-padding + 15;
       color: lighten($sidebar-link-color, 5%);
 
@@ -107,21 +114,57 @@ div[role=search] {
   color: #444;
 
   .languages {
-    display: block;
-    text-align: center;
-    float: left;
     font-size: 14px;
     position: relative;
-    top: 7px;
+    top: 8px;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    @include no-select;
+
+    &.pt-br {
+      width: 115px;
+      &.open .menu { width: 135px; }
+    }
+
+    &.open {
+      .menu {
+        background: #fff;
+        padding: 30px 10px 5px;
+        top: -5px;
+        z-index: 700;
+        width: 120px;
+        position: absolute;
+        left: -10px;
+        @include box-shadow(0 1px 5px rgba(0,0,0,0.1));
+        border-radius: 4px;
+      }
+
+      a {
+        display: block;
+
+        &.current {
+          top: 5px;
+          right: 10px;
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      z-index: 800;
+    }
 
     a {
-      display: inline-block;
-      text-transform: uppercase;
       display: none;
+      text-transform: uppercase;
 
       &.current {
-        display: inline-block;
+        display: block;
         font-weight: bold;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
@@ -140,3 +183,15 @@ div[role=search] {
     }
   }
 }
+
+.entires {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    display: block;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+

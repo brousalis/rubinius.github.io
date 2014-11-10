@@ -1,7 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato|Droid+Sans|Source+Sans+Pro);
+//@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
 
-$font-family-sans-serif:  'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Helvetica', Arial, sans-serif !default;
 $font-size-base:          15px !default;
 
 $body-bg:                 #fff;
@@ -42,3 +41,49 @@ $screen-xlg-desktop:      $screen-lg-min !default;
 $screen-xs-max:           ($screen-sm-min - 1) !default;
 $screen-sm-max:           ($screen-md-min - 1) !default;
 $screen-md-max:           ($screen-lg-min - 1) !default;
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin arrow($direction, $color, $width: 6px, $height: 8px){
+  border-style: dashed;
+  border-color: transparent;
+  border-width: $width;
+  display: -moz-inline-box;
+  display: inline-block;
+  font-size: 10px;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 0;
+  @if $direction == 'up' {
+    border-bottom-width: $height;
+    border-bottom-style: solid;
+    border-bottom-color: $color;
+    top: 2px;
+  } @else if $direction == 'right' {
+    border-left-width: $height;
+    border-left-style: solid;
+    border-left-color: $color;
+    top: 2px;
+  } @else if $direction == 'down' {
+    border-top-width: $height;
+    border-top-style: solid;
+    border-top-color: $color;
+    top: 2px;
+  } @else if $direction == 'left' {
+    border-right-width: $height;
+    border-right-style: solid;
+    border-right-color: $color;
+    top: 2px;
+  }
+}
+
+
