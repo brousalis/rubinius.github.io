@@ -30,13 +30,15 @@ h2 {
     border: 0 none;
     vertical-align: baseline;
   }
-  letter-spacing: -0.06em;
+  //letter-spacing: -0.06em;
+  letter-spacing: -1px;
   font-size: 3em;
   font-weight: bold;
 }
 
 h3 {
-  letter-spacing: -0.06em;
+  //letter-spacing: -0.06em;
+  letter-spacing: -1px;
   font-size: 3em;
   font-weight: bold;
 }
@@ -92,6 +94,7 @@ header {
     float: right;
     ul {
       margin: 0;
+      padding: 0;
       padding-bottom: 2em;
     }
     li {
@@ -124,7 +127,7 @@ header {
     text-shadow: #ccc 3px 3px 10px;
     font-size: 8.5em;
     font-weight: bold;
-    letter-spacing: -0.06em;
+    //letter-spacing: -0.06em;
     margin: 0;
     color: #000;
     a {
@@ -401,9 +404,6 @@ a.instruction {
       margin: -0.125em -0.25em -0.25em;
       padding: 0.125em 0.25em;
       display: inline-block;
-      &:hover {
-        color: white;
-      }
     }
   }
   blockquote {
@@ -424,6 +424,8 @@ a.anchor_title {
 
 div.post {
   border-bottom: 1px solid #cccccc;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .home_page {
