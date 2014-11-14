@@ -13,7 +13,8 @@
 
 #sidebar {
   background: $sidebar-bg;
-  border-right: 1px solid $sidebar-border-color;
+  border: 1px solid $sidebar-border-color;
+  border-top: none;
   width: $sidebar-width;
   color: #ddd;
   padding-bottom: 45px;
@@ -67,6 +68,7 @@ div[role=search] {
   padding: 0;
   margin: 0;
   margin-top: 10px;
+  list-style-type: none;
 
   li {
     a {

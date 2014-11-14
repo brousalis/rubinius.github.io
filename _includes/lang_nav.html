@@ -1,5 +1,5 @@
 <div class="languages {{ page.lang }}">
-  <span>Language: </span>
+  <span>{{ page.lang_label }}: </span>
   <div class="menu">
     {% for lang in page.languages %}
     {% capture oldurl_prefix %}/doc/{{ page.lang }}/{% endcapture %}

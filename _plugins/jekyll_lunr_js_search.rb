@@ -28,7 +28,6 @@ module Jekyll
       # Index all pages except pages matching any value in config['lunr_excludes'] or with date['exclude_from_search']
       # The main content from each page is extracted and saved to disk as json
       def generate(site)
-        return false
         puts 'Running the search indexer...'
 
         # gather pages and posts

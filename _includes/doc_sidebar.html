@@ -19,31 +19,31 @@
 
     {% case page.lang %}
     {% when 'de' %}
-      {% capture sidebar %}{% include index_de.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_de.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'en' %}
-      {% capture sidebar %}{% include index_en.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_en.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'es' %}
-      {% capture sidebar %}{% include index_es.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_es.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'fr' %}
-      {% capture sidebar %}{% include index_fr.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_fr.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'it' %}
-      {% capture sidebar %}{% include index_it.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_it.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'ja' %}
-      {% capture sidebar %}{% include index_ja.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_ja.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'pl' %}
-      {% capture sidebar %}{% include index_pl.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_pl.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'pt_br' %}
-      {% capture sidebar %}{% include index_pt_br.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_pt_br.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% when 'ru' %}
-      {% capture sidebar %}{% include index_ru.markdown %}{% endcapture %}
+      {% capture sidebar %}{% include doc_index_ru.markdown %}{% endcapture %}
       {{ sidebar | markdownify }}
     {% endcase %}
   </div>
